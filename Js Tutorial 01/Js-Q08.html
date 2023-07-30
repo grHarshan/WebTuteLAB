@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Year of Birth from NIC</title>
+    </head>
+    <body>
+        <button id="nicButton">Get Year of Birth</button>
+        <p id="result"></p>
+
+        <script>
+            document.getElementById('nicButton').onclick = function() {
+                let nic = prompt('Enter the NIC number:');
+                if(nic.length < 2) {
+                    alert('Invalid input, please enter a valid NIC number');
+                    return;
+                }
+                
+                let yearOfBirth = '19' + nic.slice(0, 2);
+		// Displaying the year of birth in the page
+                document.getElementById('result').textContent = 'Year of birth: ' + yearOfBirth;
+            }
+        </script>
+    </body>
+</html>

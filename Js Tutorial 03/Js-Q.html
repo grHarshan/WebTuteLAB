@@ -1,0 +1,137 @@
+<html>
+<head>
+	<title>Javascript</title>
+
+<script>
+function x()
+{
+	//input boxes for empty values 
+	if(document.log.fn.value=="")
+	{
+		alert("Error:Input is empty!");
+	}
+	if(document.log.ln.value=="")
+	{
+		alert("Error:Input is empty!");
+	}
+	if(document.log.dob.value=="")
+	{
+		alert("Error:Date od Birth Input is empty!");
+	}
+	if(document.log.em.value=="")
+	{
+		alert("Error: Email Input is empty!");
+	}
+	if(document.log.pw.value=="")
+	{
+		alert("Error: Password Input is empty!");
+	}
+	if(document.log.cpw.value=="")
+	{
+		alert("Error: Confirm Password Input is empty!");
+	}
+
+
+	//Validate Email address 
+	if(document.log.em.value.indexOf("@") === -1 || document.log.em.value.indexOf(".")===-1)
+	{
+		alert("Not validate Email Address");
+	}
+
+
+	//Validate Phone number 
+	if(isNaN(document.log.ph.value))
+	{
+		alert("Can only enter numerical values");
+	}
+	if(document.log.p.value<11)
+	{
+		alert("Not valid Phone Number");
+	}
+
+	
+	//Validate password confirmation 
+	if(document.log.pw.value!=document.log.cpw.value)
+	{
+		alert("Passwords are not same");
+	}
+
+}
+</script>
+</head>
+
+<body>
+<form name="log">
+<center>
+
+
+<table boder=0>
+	<tr>
+		<td><h1>Sign Up</h1></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>First Name</td>
+		<td><input type="text" name="fn" placeholder="Enter First Name"></td>
+	</tr>
+	<tr>
+		<td>Last Name</td>
+		<td><input type="text" name="ln" placeholder="Enter Last Name"></td>
+	</tr>
+	<tr>
+		<td>Date of Birth</td>
+		<td><input type="date" name="dob"></td>
+	</tr>
+	<tr>
+		<td>Gender</td>
+		<td><input type="radio" name="gender">Male
+		    <input type="radio" name="gender">Male</td>
+	</tr>
+	<tr>
+		<td>Country</td>
+		<td>
+			<select name="co">
+				<option value="s">Sri Lanka</option>
+				<option value="i">China</option>
+				<option value="k">India</option>
+				<option value="u">Arab</option>
+			</select></td>	
+	</tr>
+	<tr>
+		<td>Email</td>
+		<td><input type="text" name="em" placeholder="Enter E-mail"></td>
+	</tr>
+	<tr>
+		<td>Phone</td>
+		<td><input type="text" name="ph" placeholder="Enter Phone"></td>
+	</tr>
+	<tr>
+		<td>Password</td>
+		<td><input type="password" name="pw"></td>
+	</tr>
+	<tr>
+		<td>Confirm Password</td>
+		<td><input type="password" name="cpw"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="checkbox">I agree to the Terms of use</td>
+	</tr>
+	<tr>
+		<td><input type="button" name="button1" value="Submit" onClick="x()">
+		<input type="button" name="button1" value="Clear" onClick="x()"></td>
+		<td></td>
+	</tr>
+
+
+
+</center>
+</table>
+
+
+</form>
+
+
+
+</body>
+</table>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Redirect Confirmation</title>
+    </head>
+    <body>
+        <button id="googleButton">Google</button>
+        <p id="message"></p>
+
+        <script>
+            document.getElementById('googleButton').onclick = function() {
+                let decision = confirm("Do you want to go to Google?");
+                if(decision) {
+                    window.location.href = 'https://www.google.com';
+                } else {
+                    document.getElementById('message').textContent = "You decided to stay";
+                }
+            }
+        </script>
+    </body>
+</html>

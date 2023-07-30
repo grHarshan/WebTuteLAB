@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Grade Calculator</title>
+    </head>
+    <body>
+	<p id="totalSum"></p>
+	<p id="average"></p>
+        <button id="gradeButton">Get Grade</button>
+        
+
+        <script>
+            document.getElementById('gradeButton').onclick = function() {
+                let total = 0;
+                let marks = [];
+                for(let i = 1; i <= 5; i++) {
+                    let mark = parseInt(prompt(`Enter mark #${i}`));
+                    if(isNaN(mark)) {
+                        alert('Invalid input, please enter a number');
+                        return;
+                    }
+                    marks.push(mark);
+                    total += mark;
+                }
+	
+		let average = total / marks.length;
+                
+                // Displaying the total sum in the page
+                document.getElementById('totalSum').textContent = 'Total Sum: ' + total;
+	
+		 // Displaying the total average in the page
+                document.getElementById('average').textContent = 'Average: ' + average;
+            }
+        </script>
+    </body>
+</html>

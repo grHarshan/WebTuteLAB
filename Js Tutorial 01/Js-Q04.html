@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Area of a Circle</title>
+    </head>
+    <body>
+        <button id="calculateButton">Calculate Area</button>
+        <p id="result"></p>
+
+        <script>
+            document.getElementById('calculateButton').onclick = function() {
+                let radius = parseFloat(prompt('Enter the radius of the circle:'));
+                if(isNaN(radius)) {
+                    alert('Invalid input, please enter a number');
+                    return;
+                }
+                let pi = 22 / 7;
+                let area = pi * radius * radius;
+                
+                // Displaying the area in the page
+                document.getElementById('result').textContent = 'Area of the circle: ' + area;
+            }
+        </script>
+    </body>
+</html>

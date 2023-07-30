@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Javascript</title>
+</head>
+
+<body>
+
+<table id="myTable">
+    <tr>
+        <td>Row1 cell1</td>
+        <td>Row2 cell2</td>
+    </tr>
+<tr>
+        <td>Row1 cell1</td>
+        <td>Row2 cell2</td>
+    </tr>
+
+</table>
+
+<button onclick="addRow()">Add Row</button>
+
+	<script>
+		function addRow() {
+			// Get a reference to the table
+			let table = document.getElementById('myTable');
+
+			// Create new row and cells
+			let newRow = table.insertRow(-1); // -1 means the new row will be inserted at the last position
+			let cell1 = newRow.insertCell(0);
+			let cell2 = newRow.insertCell(1);
+
+			// Add some text to the new cells:
+			cell1.innerHTML = "Row1 cell1";
+			cell2.innerHTML = "Row2 cell2";
+		}
+	</script>
+
+
+</body>
+</html>
